@@ -40,6 +40,8 @@
       ansible.builtin.shell: |
         npm install
         npm run build
+      args:
+        chdir:  /tmp/frontend
 
     - name: Cleanup default http content
       ansible.builtin.file:
